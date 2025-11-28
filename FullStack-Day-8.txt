@@ -1,0 +1,52 @@
+Day 8:
+==========
+
+1) Command Line Arguments
+==================================
+Command Line Arguments allow you to pass values to a Python program from the terminal.
+They are stored in sys.argv (a list of strings):
+
+sys.argv[0] → Script name
+sys.argv[1] → First argument
+You must import the sys module.
+
+Example:
+# file: demo.py
+import sys
+print(sys.argv)
+
+# Run in terminal:
+# python demo.py 10 20
+# Output: ['demo.py', '10', '20']
+
+Useful for automation and configurable scripts.
+
+
+2) Comprehensions in Python
+====================================
+Comprehensions provide a short, clean way to create collections.
+Tuple “Comprehensions” (Actually Generator Expressions)
+Python doesn’t support true tuple comprehensions.
+It uses generator expressions inside parentheses.
+
+Example:
+t = tuple(x*x for x in range(5))
+print(t)   # (0,1,4,9,16)
+
+
+Set Comprehensions
+===========================
+Create sets with unique values using {expression for item in iterable}.
+
+Example:
+s = {x*x for x in range(5)}
+print(s)   # {0,1,4,9,16}
+
+
+Dictionary Comprehensions
+==================================
+Create key–value pairs using {key: value for item in iterable}.
+
+Example:
+d = {x: x*x for x in range(5)}
+print(d)   # {0:0,1:1,2:4,3:9,4:16}
